@@ -1,27 +1,33 @@
 pipeline {
   agent any
   stages {
-    stage('Hello') {
-      steps {
-        echo 'Hello word'
-      }
-    }
-
     stage('Build') {
       steps {
         echo 'Construir Docker'
+        echo 'Montar imagen docker'
       }
     }
 
-    stage('Runner') {
-      steps {
-        echo 'Correr Docker'
+    stage('Test') {
+      parallel {
+        stage('Test') {
+          steps {
+            echo 'Prueba 1'
+          }
+        }
+
+        stage('') {
+          steps {
+            echo 'Prueba 2'
+          }
+        }
+
       }
     }
 
-    stage('Inicializar') {
+    stage('Deploy') {
       steps {
-        echo 'Cinicializar servidor'
+        echo 'Despliegue'
       }
     }
 
