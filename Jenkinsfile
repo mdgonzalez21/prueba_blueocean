@@ -3,9 +3,13 @@ pipeline {
   stages {
     stage('Hello') {
       steps {
-        echo 'Heelo word'
+        echo 'Hello word'
       }
     }
-
+    stage('Build') {
+      steps {
+        echo 'Construir Docker'
+      }
+    }
   }
 }
