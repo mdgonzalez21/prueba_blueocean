@@ -18,6 +18,7 @@ pipeline {
         echo 'Correr Docker'
       }
     }
+
     stage('Inicializar') {
       steps {
         echo 'Cinicializar servidor'
