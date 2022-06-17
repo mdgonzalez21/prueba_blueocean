@@ -6,10 +6,12 @@ pipeline {
         echo 'Hello word'
       }
     }
+
     stage('Build') {
       steps {
         echo 'Construir Docker'
       }
     }
+
   }
 }
