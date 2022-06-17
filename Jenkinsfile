@@ -6,11 +6,13 @@ pipeline {
         echo 'Hello word'
       }
     }
+
     stage('Build') {
       steps {
         echo 'Construir Docker'
       }
     }
+
     stage('Runner') {
       steps {
         echo 'Correr Docker'
