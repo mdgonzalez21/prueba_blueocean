@@ -11,5 +11,11 @@ pipeline {
         echo 'Construir Docker'
       }
     }
+    stage('Runner') {
+      steps {
+        echo 'Correr Docker'
+      }
+    }
+
   }
 }
